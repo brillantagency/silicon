@@ -1,0 +1,110 @@
+<section class="main-content">
+    <div class="container-ms">
+        <div class="content-pack content-pack--p">
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/ventes.svg');"></div>
+                <div class="col-a">
+                    <h2>Ventes</h2>
+                    <p>Une chaine commerciale pro</p>
+                    <a href="/fr/sales" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/achats.svg');"></div>
+                <div class="col-a">
+                    <h2>Achats</h2>
+                    <p>Maitriser vos approvisionnements avec MRP |, || et JIT</p>
+                    <a href="/fr/purchases" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/comptabilite.svg');"></div>
+                <div class="col-a">
+                    <h2>Comptabilité</h2>
+                    <p>Une comptabilité rigoureuse intégrée</p>
+                    <a href="/fr/accounting" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/wms.svg');"></div>
+                <div class="col-a">
+                    <h2>WMS</h2>
+                    <p>Une gestion de stock ultra complète</p>
+                    <a href="/fr/wms" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/crm.svg');"></div>
+                <div class="col-a">
+                    <h2>CRM</h2>
+                    <p>Soyez proche de vos clients.</p>
+                    <a href="/fr/crm" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/helpdesk.svg');"></div>
+                <div class="col-a">
+                    <h2>Helpdesk</h2>
+                    <p>Gestion du support client, aide au client</p>
+                    <a href="/fr/helpdesk" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/pos.svg');"></div>
+                <div class="col-a">
+                    <h2>POS</h2>
+                    <p> Module point de vente intégré</p>
+                    <a href="/fr/pos" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/subscriptions.svg');"></div>
+                <div class="col-a">
+                    <h2>Subscriptions</h2>
+                    <p>Gérer les abonnements, les loyers et contracts de maintenances</p>
+                    <a href="/fr/subscription" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/Trakker.svg');"></div>
+                <div class="col-a">
+                    <h2>Trakker</h2>
+                    <p>Gérer les projets, les chantiers, les projets techniques</p>
+                    <a href="/fr/trakker" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/manufacturing.svg');"></div>
+                <div class="col-a">
+                    <h2>Manufacturing</h2>
+                    <p>Gestion de production de haut niveau avec planification</p>
+                    <a href="/fr/manufacturing" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/Park manager.svg');"></div>
+                <div class="col-a">
+                    <h2>Park Manager</h2>
+                    <p>Une Gestion de maintenance GMAO Intégrée</p>
+                    <a href="/fr/park-manager" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/Silicon Appli eShop.svg');"></div>
+                <div class="col-a">
+                    <h2>Web e-shop</h2>
+                    <p>Boostez votre e-commerce avec une solution tout-en-un</p>
+                    <a href="/fr/e-commerce" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+            <div class="item-a">
+                <div class="picto-a" style="background-image: url('/files/web_template/2024/12/home_fr/Silicon Appli Framework.svg');"></div>
+                <div class="col-a">
+                    <h2>Framework</h2>
+                    <p>agile et personnalisable pour une gestion sur-mesure</p>
+                    <a href="/fr/framework" class="btn-c">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

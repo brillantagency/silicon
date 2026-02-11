@@ -1,0 +1,84 @@
+.block_text_media {
+    z-index: 1;
+    position: relative;
+}
+
+.block_text_media.bg_blue .text_media_title,
+.block_text_media.bg_darkblue .text_media_title {
+    color: var(--white);
+}
+.block_text_media .text_media_img {
+    height: 100%;
+    width: 100%;
+}
+.block_text_media .text_media_position {
+    display: flex;
+    column-gap: 100px;
+    row-gap: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+.block_text_media .component_video iframe,
+.block_text_media .component_video video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+.block_text_media .text_media_position .text_media_wrapper {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.block_text_media .text_media_position .text_media_media_wrapper {
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    max-height: 300px;
+}
+.block_text_media .text_media_position .component_video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    height: 0;
+}
+.block_text_media .text_media_media_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.block_text_media .text_media_position_top,
+.block_text_media .text_media_position_bottom {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+@media screen and (min-width: 768px) {
+    .block_text_media .text_media_position_right {
+        flex-direction: row-reverse;
+    }
+    .block_text_media .text_media_position_left {
+        flex-direction: row;
+    }
+    .block_text_media .text_media_position_top {
+        flex-direction: column;
+    }
+    .block_text_media .text_media_position_bottom {
+        flex-direction: column-reverse;
+    }
+    .block_text_media .text_media_position .text_media_wrapper:not(.text_media_wrapper_nomedia) {
+        width: 50%;
+    }
+    .block_text_media .text_media_position .text_media_media_wrapper {
+        max-height: initial;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .block_text_media .text_media_img {
+        width: 80%;
+    }
+}

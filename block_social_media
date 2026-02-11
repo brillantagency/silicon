@@ -1,0 +1,21 @@
+<div class="all_logo">
+    <div class="instagram_group reseau_group">
+        <a href="https://www.instagram.com/silicon_ioi/" rel="noopener noreferrer" target="_blank">
+            <img class="logo_reseau logo_instagram" id="img-res"
+                src="/files/web_page/2023/3/test_universe/logo-instagram-blanc.png">
+        </a>
+    </div>
+    <div class="linkedin_group reseau_group">
+        <a href="https://be.linkedin.com/company/silicon-brain" rel="noopener noreferrer" target="_blank">
+            <img class="logo_reseau logo_Linkedin" id="img-res"
+                src="/files/web_page/2023/3/test_universe/logo-linkedin-blanc.png">
+        </a>
+    </div>
+    <div class="facebook_group reseau_group">
+        <a href="https://www.facebook.com/pages/category/computer-company/Silicon-Brain-NVSA-299571350883715/"
+            rel="noopener noreferrer" target="_blank">
+            <img class="logo_reseau logo_facebook" id="img-res"
+                src="/files/web_page/2023/3/test_universe/logo-facebook-blanc.png">
+        </a>
+    </div>
+</div>

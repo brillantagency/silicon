@@ -1,0 +1,7 @@
+{% if video_actif %}
+<div class="block_fullvideo">
+    <div class="video-container">
+        <iframe id="youtube-video" src="https://www.youtube-nocookie.com/embed/{{ video_embed_id }}?controls={% if video_control %}1{% else %}0{% endif %}&modestbranding=1&autoplay={% if video_autoplay %}1{% else %}0{% endif %}&mute={% if video_autoplay %}1{% else %}0{% endif %}&playsinline=1&enablejsapi=1&rel=0&loop={% if video_loop %}1{% else %}0{% endif %}&playlist=b2ZI-t7fYro" allow="autoplay; encrypted-media"></iframe>
+    </div>
+</div>
+{% endif %}

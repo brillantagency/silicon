@@ -1,0 +1,44 @@
+<section class="section_lastnews main-content">
+    <div class="container-ms">
+        <div class="content-txt-s">
+            <h2>
+                {% if lastnews_title %}
+                    {{lastnews_title}}
+                 {% elif lastnews_language =='fr' %}
+                    {{_("Tout sur l'actualité de Silicon!",lastnews_language)}}
+                 {% elif lastnews_language =='nl' %}
+                    {{_("Al het laatste nieuws van Silicon!",lastnews_language)}}
+                 {% elif lastnews_language =='en' %}
+                    {{_("All the latest news from Silicon!",lastnews_language)}}
+                 {% endif %}
+             </h2>
+            <p>
+                {% if lastnews_text %}
+                    {{lastnews_text}}
+                 {% elif lastnews_language =='fr' %}
+                    {{_("Avec notre équipe de développement extrêmement efficace, nous débordons de nouveautés. Améliorer le produit, c’est dans notre ADN depuis plus de 30 ans. Des nouveautés autant fonctionnelles que technologiques.",lastnews_language)}}
+                 {% elif lastnews_language =='nl' %}
+                    {{_("Met ons zeer efficiënte ontwikkelingsteam barsten we van de nieuwe ideeën. Het verbeteren van het product zit al meer dan 30 jaar in ons DNA. Nieuwe functies, zowel functioneel als technologisch.",lastnews_language)}}
+                 {% elif lastnews_language =='en' %}
+                    {{_("With our highly efficient development team, we're bursting with new ideas. Improving the product has been in our DNA for over 30 years. New features, both functional and technological.",lastnews_language)}}
+                {% endif %}
+            </p>
+        </div>
+
+        <div id="content-news" class="content-news">
+            {%for new in frappe.get_all("ioi Site News",fields=["real_portal_result"],filters={"enabled":1,"language": lastnews_language},order_by="date desc")[:3]%}
+                {{new.real_portal_result or ""}}
+            {%endfor%}
+        </div>
+
+        <a href="/{{lastnews_language}}/news" class="btn-c btn-c--margin">
+             {% if lastnews_language =='fr' %}
+                {{_("Voir toutes les news",lastnews_language)}}</p>
+             {% elif lastnews_language =='nl' %}
+                {{_("Bekijk al het nieuws",lastnews_language)}}
+             {% elif lastnews_language =='en' %}
+                {{_("See all the news",lastnews_language)}}
+            {% endif %}
+        </a>
+    </div>
+</section>

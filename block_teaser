@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/files/block_teaser.css">
+
+<div class="block_teaser head head--bottom w-100">
+    <div class="teaser_wrapper container-head">
+        <div class="teaser_img_wrapper picto-h">{% if teaser_image %}<img class="teaser_img" src="{{teaser_image}}" alt="{{teaser_image}}" />{% endif %}</div>
+        
+        {% if teaser_title %}
+        <h2 class="teaser_title">{{teaser_title}}</h2>
+        {% endif %}
+        
+        {% if teaser_text %}
+        <p class="teaser_text text-center text-light">{{teaser_text}}</p>
+        {% endif %}
+        
+        {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+          {% set args = {
+            "cta_title": cta_title,
+            "cta_url": cta_url,
+            "cta_color": cta_color,
+            "cta_position": cta_position,
+            "cta_target_blank" : cta_target_blank,
+          } %}
+        {{frappe.render_template(var,args)}}
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{% set position = {
+  "center": "center",
+  "right": "right",
+  "left": "left"
+} %}
+
+{% if cta_url %}
+<a href="{{ cta_url }}" 
+   {% if cta_target_blank %}target="_blank"{% endif %} 
+   class="single-btn mt-10 single-btn--{{ position.get(cta_position, '') }} {% if cta_actif_popup_demo %}popup_demo_btn-js{% endif %}">
+   {{ cta_title }}
+</a>
+{% endif %}

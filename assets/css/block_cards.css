@@ -1,0 +1,83 @@
+.block_cards .cards_item {
+    padding: 30px 30px 25px 30px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .75rem;
+}
+
+.block_cards .cards_wrapper_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.block_cards .cards_item_col2 {
+    width: calc(50% - 20px);
+}
+
+.block_cards .cards_item_col3 {
+    width: calc(33% - 20px);
+}
+
+.block_cards .cards_item_col4 {
+    width: calc(25% - 25px);
+}
+
+.block_cards .cards_header {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.block_cards .cards_item_title {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.block_cards .cards_item_text {
+    max-height: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.block_cards .cards_item_text::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background: #ffffff;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.block_cards .cards_item.show .cards_item_text {
+    max-height: 100%;
+}
+
+.block_cards .cards_item.show .cards_item_text::before {
+    content: none;
+}
+
+.block_cards .cards_item_button {
+    color: var(--blue);
+    border: none;
+}
+
+.block_cards .cards_item.show .cards_item_button {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .block_cards .cards_wrapper_item {
+        flex-direction: row;
+    }
+    .block_cards .cards_item {
+        padding: 40px 40px 35px 40px;
+    }
+    .block_cards .cards_header {
+        flex-direction: row;
+    }
+}

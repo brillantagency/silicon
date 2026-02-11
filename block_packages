@@ -1,0 +1,118 @@
+{% set lang = 'en' %}
+{% set path_parts = frappe.request.path.split('/') %}
+
+{% if path_parts | length > 1 and path_parts[1] in ['fr', 'nl', 'en'] %}
+    {% set lang = path_parts[1] %}
+{% endif %}
+
+{% if package_actif %}
+<section class="block_package main-content">
+    <div class="container-ms">
+        <div class="content-txt-s content-txt-s--margin-bottom">
+            <h2>
+                {% if package_title %}
+                    {{package_title}}
+                {% elif lang == 'fr' %}
+                    {{_('Un package ?', lang)}}
+                {% elif lang == 'nl' %}
+                    {{_('Een pakket?', lang)}}
+                {% elif lang == 'en' %}
+                    {{_('A packageeee?', lang)}}      
+                {% endif %}
+            </h2>
+            <p>
+                {% if package_text %}
+                    {{package_text}}
+                {% elif lang == 'fr' %}
+                    {{_('Un éventail de package sont à disposition. Ces packages sont orientés métier avec un ensemble de fonctionnalités essentielles et innovantes pour bien gérer le flux de votre entreprise.', lang)}}
+                {% elif lang == 'nl' %}
+                    {{_('Er is een reeks pakketten beschikbaar, gericht op uw sector, met een set van essentiële en innovatieve functies om de workflow van uw bedrijf optimaal te beheren.', lang)}}
+                {% elif lang == 'en' %}
+                    {{_('A range of packages is available. These packages are industry-specific, offering a set of essential and innovative features to efficiently manage your business workflow.', lang)}}      
+                {% endif %}
+            </p>
+        </div>
+        
+        <div class="content-pack content-pack--p">
+            <div class="content-pack">
+                {% for pack in package_repeater %}
+                    <div class="item-p shadow-none">
+                        {% if pack.package_item_promo %}
+                        <div class="promo">
+                            <p>{{ pack.package_item_promo }}</p>
+                        </div>
+                        {% endif %}
+                        
+                        {% if pack.package_item_reco %}
+                        <div class="promo">
+                            <p>
+                                {% if lang == 'fr' %}
+                                    {{_('Recommandé', lang)}}
+                                {% elif lang == 'nl' %}
+                                    {{_('AANBEVOLEN', lang)}}
+                                {% elif lang == 'en' %}
+                                    {{_('Recommended', lang)}}      
+                                {% endif %}
+                            </p>
+                        </div>
+                        {% endif %}
+    
+                        <div class="content-item-p">
+                            {% if pack.package_item_span %}
+                            <span>
+                                {{pack.package_item_span}}   
+                            </span>
+                            {% endif %}
+
+                            {% if pack.package_item_title %}
+                                <h2 class="pb-5">{{pack.package_item_title}}</h2>
+                            {% endif %}
+
+                            {% if pack.package_item_text %}
+                                <div>{{pack.package_item_text}}</div>
+                            {% endif %}
+                            
+                            {% if pack.package_item_price or pack.package_item_price_from or pack.package_item_price_by %}
+                                <p class="h1 pb-10 pt-5 text-center">
+                                    {{ pack.package_item_price_from }}
+                                    
+                                    {% if pack.package_item_price %}
+                                    <br><b>{{ pack.package_item_price }}€</b>
+                                    {% endif %}
+                                    
+                                    {% if pack.package_item_price_by %}
+                                    <small class="h3">/ {{ pack.package_item_price_by }}</small>
+                                    {% endif %}
+                                </p>
+                            {% endif %}
+
+                            {% if pack.package_button_title %}
+                                {% set button_title = pack.package_button_title %}
+                            {% else %}
+                                {% if lang == 'fr' %}
+                                    {% set button_title = _('En savoir plus', lang) %}
+                                {% elif lang == 'nl' %}
+                                    {% set button_title = _('Meer weten', lang) %}
+                                {% elif lang == 'en' %}
+                                    {% set button_title = _('Learn more', lang) %}
+                                {% endif %}
+                            {% endif %}
+
+                            {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+                            {% set args = {
+                              "cta_title": button_title,
+                              "cta_url": pack.package_button_url,
+                              "cta_color": pack.package_button_color,
+                              "cta_position": pack.package_button_position,
+                              "": cta_actif_popup_demo,
+                              "cta_target_blank" : pack.package_button_target_blank,
+                            } %}
+                            {{frappe.render_template(var,args)}}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

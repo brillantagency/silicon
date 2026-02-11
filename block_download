@@ -1,0 +1,731 @@
+<div class="page__ioi-universe">
+    <div class="block_join">
+        <div class="block_join_container container">
+            <a href="{{columns_link_1}}" rel="noopener noreferrer nofollow" target="_blank"
+                class="d-flex flex-column align-items-center justify-content-center"> <img class="img_forum"
+                    src="/files/web_page/2023/3/test_universe/hello_ioi_blanc_1_ok.png" alt>
+                {% if columns_text_1 %}<span class="text-white text-center h3 mt-5">{{columns_text_1}}</span>{% endif %}
+            </a>
+            <a href="{{columns_link_2}}" rel="noopener noreferrer nofollow" target="_blank"
+                class="d-flex flex-column align-items-center justify-content-center"><img class="img_wiki"
+                    src="/files/web_page/2023/3/test_universe/Capture%20d'%C3%A9cran%202023-03-14%20095541.png" alt>
+                {% if columns_text_2 %}<span class="text-white text-center h3 mt-5">{{columns_text_2}}</span>{% endif %}
+            </a>
+            <a href="{{columns_link_3}}" rel="noopener noreferrer nofollow" target="_blank"
+                class="d-flex flex-column align-items-center justify-content-center"><img class="img_wiki"
+                    src="/files/web_template/2023/3/universe_en/icon-annoucement.svg" alt>
+                {% if columns_text_3 %}<span class="text-white text-center h3 mt-5">{{columns_text_3}}</span>{% endif %}
+            </a>
+            <a href="{{columns_link_4}}" rel="noopener noreferrer nofollow" target="_blank"
+            class="d-flex flex-column align-items-center justify-content-center"><img class="img_wiki" alt="Icon support"
+                src="/files/web_template/2023/3/universe_en/icon-tickets.svg" alt>
+                {% if columns_text_4 %}<span class="text-white text-center h3 mt-5">{{columns_text_4}}</span>{% endif %}
+            </a>
+        </div>
+    </div>
+    <section class="main-content container">
+        <div class="content-txt-s w-75 m-auto">
+            {% if download_title %}
+                <h2 class="text-center">{{download_title}}</h2>
+            {% endif %}
+    
+            {% if download_text %}
+                <p class="text-center">{{download_text}}</p>
+            {% endif %}
+        </div>
+        <div class="block_files">
+            <div class="all_categories">
+                <div class="pack_categories InCat">
+                    <div class="title_categories">
+                        <strong class="docCard__title | title title--xs | tt-u | fw-semi">Folders packs</strong>
+                    </div>
+                    <div class="LinkDwnl">
+                        <div class="link_categories">
+                            <!-- Pack - Silicon ioi ERP for industry 2eme Link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi <br><b>ERP for industry</b></span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>NL</span>
+                                        <a class="card_link" download="ioi_erp_for_Industry_NL_vf.pdf"
+                                            href="/files/web_template/2023/3/universe_en/ioi_erp_for_Industry_NL_vf.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/ioi_erp_for_Industry_NL_vf.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="categories_card_content">
+                                        <span>FR</span>
+                                        <a class="card_link" download="eroforindustry_siliconioi_pack-fr.pdf"
+                                            href="/files/web_template/2023/3/universe_en/eroforindustry_siliconioi_pack-fr.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/eroforindustry_siliconioi_pack-fr.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pack - Silicon ioi ERP for SME 2eme Link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi <br><b>ERP for SME</b></span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>NL</span>
+                                        <a class="card_link" download="ioi_erp_for_SME_NL_vf.pdf"
+                                            href="/files/web_template/2023/3/universe_en/ioi_erp_for_SME_NL_vf.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/ioi_erp_for_SME_NL_vf.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="categories_card_content">
+                                        <span>FR</span>
+                                        <a class="card_link" download="eroforsme_siliconioi_pack-fr.pdf"
+                                            href="/files/web_template/2023/3/universe_en/eroforsme_siliconioi_pack-fr.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/eroforsme_siliconioi_pack-fr.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pack - Silicon ioi My Business 2eme Link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi <br><b>My Business</b></span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>NL</span>
+                                        <a class="card_link" download="ioimybusiness_NL_vf.pdf"
+                                            href="/files/web_template/2023/3/universe_en/ioimybusiness_NL_vf.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/ioimybusiness_NL_vf.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="categories_card_content">
+                                        <span>FR</span>
+                                        <a class="card_link" download="mybusiness_siliconioi_pack.pdf"
+                                            href="/files/web_template/2023/3/universe_en/mybusiness_siliconioi_pack.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/mybusiness_siliconioi_pack.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi <br><b>Accounting</b></span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>FR</span>
+                                        <a class="card_link" download="Siliconioi_Packs_client_Accounting_VF.pdf"
+                                            href="/files/web_template/2023/3/universe_en/Siliconioi_Packs_client_Accounting_VF.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/Siliconioi_Packs_client_Accounting_VF.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="categories_card_content">
+                                        <span>NL</span>
+                                        <a class="card_link" download="Siliconioi_Packs_client_Accounting_VF.pdf"
+                                            href="/files/web_template/2025/5/block___download/SILI2_24811_packclient_NL_ioiaccounting%20(2).pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2025/5/block___download/SILI2_24811_packclient_NL_ioiaccounting%20(2).pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi <br><b>Expert accounting</b></span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>FR</span>
+                                        <a class="card_link" download="Siliconioi_Packs_client_Epertaccounting_VF.pdf"
+                                            href="/files/web_template/2023/3/universe_en/Siliconioi_Packs_client_Epertaccounting_VF.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2023/3/universe_en/Siliconioi_Packs_client_Epertaccounting_VF.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="categories_card_content">
+                                        <span>NL</span>
+                                        <a class="card_link" download="Siliconioi_Packs_client_Epertaccounting_VF.pdf"
+                                            href="/files/web_template/2025/5/block___download/SILI2_24811_packclient_NL_ioiexpertaccounting%20(1).pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/web_template/2025/5/block___download/SILI2_24811_packclient_NL_ioiexpertaccounting%20(1).pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi <br><b>My Invoice</b></span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>FR</span>
+                                        <a class="card_link" download="Siliconioi_Packs_client_Epertaccounting_VF.pdf"
+                                            href="/files/SILI24758_packs_client_ioimyinvoice.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/SILI24758_packs_client_ioimyinvoice.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="categories_card_content">
+                                        <span>NL</span>
+                                        <a class="card_link" download="Siliconioi_Packs_client_Epertaccounting_VF.pdf"
+                                            href="/files/SILI2_24811_packclient_NL_ioimyInvoice.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/SILI2_24811_packclient_NL_ioimyInvoice.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc_categories InCat">
+                    <div class="title_categories">
+                        <strong class="docCard__title | title title--xs | tt-u | fw-semi">Design ioi</strong>
+                    </div>
+                    <div class="LinkDwnl">
+                        <div class="link_categories">
+                            <!--  Documents 1er Link -->
+                            <div class="categories_card">
+                                <span class="txtPl"> Logos Silicon ioi
+                                </span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="Logos_silicon_ioi.zip" href="/files/Logos_silicon_ioi.zip"
+                                            rel="noopener noreferrer nofollow" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  Documents 2eme Link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Logos Silicon brain</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="Logos_silicon_brain.zip" href="/files/Logos_silicon_brain.zip"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ERP documents 3eme link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Logos Forum</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="Logos_forum.zip" href="/files/Logos_forum.zip"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ERP documents 4eme link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Countdowns</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="Coutdowns.zip" href="/files/Coutdowns.zip">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Silicon Background 5eme Link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon Background</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="SILICON_background_v2_jpeg.zip"
+                                            href="/files/SILICON_background_v2_jpeg.zip">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="document_categories InCat">
+                    <div class="title_categories">
+                        <strong class="docCard__title | title title--xs | tt-u | fw-semi">Documents</strong>
+                    </div>
+                    <div class="LinkDwnl">
+                        <div class="link_categories">
+                            <!-- ERP brochure 1 er link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi ERP brochure </span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="Silicon_ioi_Brochure-ERP-EN.pdf"
+                                            href="/files/Silicon_ioi_Brochure-ERP-EN.pdf" rel="noopener noreferrer"
+                                            target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/Silicon_ioi_Brochure-ERP-EN.pdf" rel="noopener noreferrer"
+                                            target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accounting brochure 2eme Link -->
+                            <div class="categories_card">
+                                <span class="txtPl">Silicon ioi accounting brochure</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="Silicon_ioi_Brochure-Accountant-EN.pdf"
+                                            href="/files/Silicon_ioi_Brochure-Accountant-EN.pdf">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <a class="card_link" href="/files/Silicon_ioi_Brochure-Accountant-EN.pdf"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tools_categories InCat">
+                    <div class="title_categories">
+                        <strong class="docCard__title | title title--xs | tt-u | fw-semi">ioi Tools</strong>
+                    </div>
+                    <div class="LinkDwnl">
+                        <div class="link_categories">
+                            <div class="categories_card">
+                                <span class="txtPl">ioi Printing Tools</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="ioiBobPDFs.7z"
+                                            href="https://qz.io/download/"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="youtube_categories InCat">
+                    <div class="title_categories">
+                        <strong class="docCard__title | title title--xs | tt-u | fw-semi">Media</strong>
+                    </div>
+                    <div class="LinkDwnl">
+                        <div class="link_categories">
+                            <!-- /Youtube Channel 1er Link\ -->
+                            <div class="categories_card">
+                                <span class="txtPl">Youtube Channel </span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" href="https://www.youtube.com/@siliconbrainnvsa5434/videos"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--eye" fill="#311095"
+                                                viewBox="0 0 29.002 19.335">
+                                                <path
+                                                    d="M28.827,13.432A16.149,16.149,0,0,0,14.5,4.5,16.152,16.152,0,0,0,.175,13.433a1.629,1.629,0,0,0,0,1.47A16.149,16.149,0,0,0,14.5,23.835,16.152,16.152,0,0,0,28.827,14.9,1.629,1.629,0,0,0,28.827,13.432ZM14.5,21.418a7.251,7.251,0,1,1,7.251-7.251A7.25,7.25,0,0,1,14.5,21.418Zm0-12.084a4.8,4.8,0,0,0-1.274.191,2.409,2.409,0,0,1-3.368,3.368A4.823,4.823,0,1,0,14.5,9.334Z"
+                                                    transform="translate(0 -4.5)"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tools_import_categories InCat">
+                    <div class="title_categories">
+                        <strong class="docCard__title | title title--xs | tt-u | fw-semi">ioi Import Tools</strong>
+                    </div>
+                    <div class="LinkDwnl">
+                        <div class="link_categories">
+                            <!-- /ioi tools 1er Link\ -->
+                            <div class="categories_card">
+                                <span class="txtPl">Bob 2 ioi Export Tool</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="ioiBobExport.7z"
+                                            href="https://github.com/Silicon-Spirit/ioiBobExport-Release/releases/latest"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="categories_card">
+                                <span class="txtPl">Bob PDFs 2 ioi Tool</span>
+                                <div class="download_btn DwVw">
+                                    <div class="categories_card_content">
+                                        <span>EN</span>
+                                        <a class="card_link" download="ioiBobPDFs.7z"
+                                            href="https://github.com/Silicon-Spirit/upload-pdf-ioi-release/releases/latest/download/upload-pdf-ioi.7z"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg aria-hidden="true" class="icon icon--dl" fill="none" stroke="#311095"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                viewBox="0 0 22.335 22.335">
+                                                <g transform="translate(-3 -3)">
+                                                    <path
+                                                        d="M23.835,22.5v4.3a2.148,2.148,0,0,1-2.148,2.148H6.648A2.148,2.148,0,0,1,4.5,26.8V22.5"
+                                                        transform="translate(0 -5.11)"></path>
+                                                    <path d="M10.5,15l5.371,5.371L21.241,15"
+                                                        transform="translate(-1.703 -2.981)"></path>
+                                                    <path d="M18,17.39V4.5" transform="translate(-3.833)"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</div>

@@ -1,0 +1,36 @@
+{% if reseller_actif %}
+<section class="main-content bg_grey">
+    <div class="container-ms">
+        {% if reseller_title %}
+        <h2 class="text-center">{{ reseller_title }}</h2>
+        {% endif %}
+        
+        {% if reseller_text %}
+        <p class="text-center">{{ reseller_text }}</p>
+        {% endif %}
+        
+        <div class="container-case">
+            <div class="case case--four case--revendeur">
+                <div class="item-c">
+                </div>
+                <div class="item-c">
+                </div>
+                <div class="item-c">
+                </div>
+                <div class="item-c">
+                </div>
+            </div>
+        </div>
+        
+        {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+        {% set args = {
+          "cta_title": reseller_button_text,
+          "cta_url": reseller_button_link,
+          "cta_color": reseller_button_color,
+          "cta_position": reseller_button_position,
+          "cta_target_blank" : reseller_button_target_blank,
+        } %}
+        {{frappe.render_template(var,args)}}
+    </div>
+</section>
+{% endif %}

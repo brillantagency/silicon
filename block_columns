@@ -1,0 +1,51 @@
+{% if columns_actif %}
+<div class="block_columns">
+    {% if columns_title %}
+    <h2 class="text-center mb-20">{{columns_title}}</h2>
+    {% endif %}
+    
+    <div class="columns columns-{{columns_count}} row {% if columns_position_center %} justify-content-center{% endif %}">
+        {% for col in columns_repeater %}
+        <div class="column col col-lg-{% if columns_count == '4' %}3{% elif columns_count == '3' %}4{% elif columns_count == '2' %}6{% else %}12{% endif %}" {% if columns_count == '2' %}style="flex: 1;"{% endif %}">
+            {% if col.column_title %}
+            <h3 class="columns_title mb-10">{{col.column_title}}</h3>
+            {% endif %}
+            
+            {% if col.column_text %}
+            <div class="columns_content">{{col.column_text}}</div>
+            {% endif %}
+            
+            {% if col.column_image_src %}
+            <img class="columns_img d-block my-10" src="{{col.column_image_src}}" alt="{% if col.column_image_alt %}{{col.column_image_alt}}{% endif %}">
+            {% endif %}
+            
+            {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+            {% set args = {
+              "cta_title": col.cta_title,
+              "cta_url": col.cta_url,
+              "cta_color": col.cta_color,
+              "cta_target_blank" : col.cta_target_blank,
+            } %}
+            {{frappe.render_template(var,args)}}
+        </div>
+        {% endfor %}    
+    </div>
+    
+    {% if column_image_src %}
+        <img class="columns_img my-20 {% if column_image_mobile_src %}d-none d-md-block{% endif %}" src="{{column_image_src}}" alt="{% if column_image_alt %}{{column_image_alt}}{% endif %}">
+    {% endif %}
+    {% if column_image_mobile_src %}
+        <img class="columns_img my-20 d-block d-md-none" src="{{column_image_mobile_src}}" alt="{% if column_image_mobile_alt %}{{column_image_mobile_alt}}{% endif %}">
+    {% endif %}
+    
+    {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+        {% set args = {
+          "cta_title": cta_title,
+          "cta_url": cta_url,
+          "cta_color": cta_color,
+          "cta_position": cta_position,
+          "cta_target_blank" : cta_target_blank,
+        } %}
+    {{frappe.render_template(var,args)}}
+</div>
+{% endif %}

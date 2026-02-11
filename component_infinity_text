@@ -1,0 +1,5 @@
+<div class="block_infinity_text middle middle--gray">
+    <div class="services">
+        <p data-text="{{infinity_text_text}}">{{infinity_text_text}}</p>
+    </div>
+</div>

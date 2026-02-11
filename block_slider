@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/files/block_banner_slider.css">
+
+{% if slider_actif %}
+<header class="homeHero | pr | bg-violet banner_slider" style="--progress: 0.44366;">
+    <div class="hero__inner | ctn | row">
+      <div class="heroSlider | js-Slider-slider slider--initialized slider--horizontal slider--pointer-events slider--watch-progress slider--backface-hidden">
+        <ul class="heroSlider__wrapper | js-Slider-wrapper banner_slider_list" style="min-height: 673px; height: 897px; transition-duration: 0ms;">
+        {% for slide in banner_slider_repeater %}
+          <li class="heroSlider__slide | heroSlide fill ctn row row--vc js-Slider-slide banner_slider_item {% if loop.first %}is-current{% endif %}">
+            <div class="heroSlide__info | up | col-12 | col-md-6">
+                {% if slide.title %}
+                    {% if loop.first %}
+                      <h1 class="heroSlide__title | title title--l | fw-bold" style="--stg: {{ loop.index }}">
+                        {{slide.title}}
+                      </h1>
+                    {% else %}
+                      <h2 class="heroSlide__title | title title--l | fw-bold" style="--stg: {{ loop.index }}">
+                        {{slide.title}}
+                      </h2>
+                    {% endif %}
+                {% endif %}
+
+                {% if slide.text %}
+                  <div class="productIntro__desc | heroSlider__content | up">
+                    {{slide.text}}
+                  </div>
+                {% endif %}
+                
+                {% if slide.cta_link1 %}
+                  <a class="heroSlide__cta | btn btn--blue {% if slide.cta_actif_popup_demo1 %}popup_demo_btn-js{% endif %}" style="--stg: 2" href="{{slide.cta_link1}}" {% if slide.cta_target_blank1 %}target="_blank"{% endif %}>
+                    <span class="btn__label">{{slide.cta_text1}}</span>
+                    <span class="btn__bg | fill"></span>
+                  </a>
+                {% endif %}
+                
+                {% if slide.cta_link2 %}
+                  <a class=" heroSlide__cta | t-hidden | btn btn--bright {% if slide.cta_actif_popup_demo2 %}popup_demo_btn-js{% endif %}" style="--stg: 2" href="{{slide.cta_link2}}" {% if slide.cta_target_blank2 %}target="_blank"{% endif %}>
+                    <span class="btn__label">{{slide.cta_text2}}</span>
+                    <span class="btn__bg | fill"></span>
+                  </a>
+                {% endif %}
+            </div>
+
+            {% if slide.img_src %}
+            <figure class="heroSlide__visual | col-12 | col-md-4">
+              <img src="{{slide.img_src}}" alt="{{slide.img_alt}}" width="507" height="423" class="heroSlide__asset | no-select | db img-top" style="--stg: 3" draggable="false">
+            </figure>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="heroSlider__scrolldown | m-only">
+          <svg class="heroSlider__scrolldownIcon | icon icon--arrow-long" fill="none" viewBox="0 0 11 78" aria-hidden="true">
+            <path stroke="currentColor" stroke-miterlimit="10" d="M5.03 75.915V0"></path>
+            <path fill="currentColor" d="M9.83 69.08a.5.5 0 0 0-.69.154l-4.11 6.452-4.109-6.452a.5.5 0 1 0-.844.537l4.531 7.115a.501.501 0 0 0 .844 0l4.531-7.115a.5.5 0 0 0-.153-.691"></path>
+          </svg>
+        </div>
+
+        <div class="heroSlider__bullets | bullets bullets--v | m-hidden banner_slider_buttletpoints" aria-hidden="true">
+          {% for slide in banner_slider_repeater %}
+          <button class="bullets__el js-Slider-bullet banner_slider_buttletpoints_button {% if loop.first %}is-current{% endif %}" type="button" data-target="{{loop.index0}}">
+            <span class="sr-only">{{ _('Aller au slide') }} {{loop.index}}</span>
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</header>
+{% endif %}

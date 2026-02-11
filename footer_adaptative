@@ -1,0 +1,333 @@
+{% set lang = 'en' %}
+{% set hidden_footer_pages = ["/wishlist", "/cart", "/deliveries", "/item", "/login", "/open-orders", "/shop"] %}
+{% set path_parts = frappe.request.path.split('/') %}
+
+{% if path_parts | length > 1 and path_parts[1] in ['fr', 'nl', 'en'] %}
+    {% set lang = path_parts[1] %}
+{% endif %}
+
+{% if frappe.request.path not in hidden_footer_pages %}
+<footer id="footer" class="footer | ctn">
+    <div class="container">
+        <aside class="aside_newsletter" id="NL">
+            <div class="block_newsletter">
+                <div class="row row--vc newsletter_form w-100">
+                    <div class="nl__header | nlHeader newsletter_header">
+                        <h2 class="nl__title | title title--s mt-0 mb-2">
+                            {% if footer_newsletter_title %}
+                                {{footer_newsletter_title}}
+                            {% elif lang == 'fr' %}
+                                {{_('Newsletter', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Nieuwsbrief', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Newsletter', lang)}}      
+                            {% endif %}
+                        </h2>
+
+                        <p class="fw-reg">
+                            {% if footer_newsletter_text %}
+                                {{footer_newsletter_text}}
+                            {% elif lang == 'fr' %}
+                                {{_('Restez informé des dernières tendances et nouvelles ! Abonnez-vous à notre newsletter.', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Blijf op de hoogte van de laatste trends en nieuwtjes! Schrijf u in voor onze nieuwsbrief.', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Stay informed about the latest trends and news! Subscribe to our newsletter.', lang)}}      
+                            {% endif %}
+                        </p>
+                    </div>
+                    
+                    {#<iframe class="iframe-form-newsletter w-100" src="/{{lang}}/newsletter-registering" title="{{_('Newsletter subscription', lang)}}"></iframe>#}
+
+                    {#{% set var = frappe.db.get_value("Web Template","Component - Newsletter","template") %}
+                    {{frappe.render_template(var)}}#}
+
+                    <form action="#" class="w-100">
+                    <fieldset class="nlForm__fieldset newsletter_fieldset w-100">
+                        <script>function newsl_reg() {
+                                var email = document.getElementById("nlEmail").value;
+
+                                if (email.toLowerCase().match(
+                                    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                )) {
+
+                                    let targeturl = "/{{lang}}/newsletter-registering/new?email=" + email;
+
+                                    gtag_report_conversion("", 'AW-11139658231/IwQBCIW8o5YYEPfj5r8p', 11820706);
+
+                                    window.open(targeturl, "_blank");
+
+                                }
+
+                            }</script>
+                            
+                            {% set placeholder = '' %}
+                        <div class="nlForm__wrapper | pr">
+                            <label class="sr-only" for="nlEmail">
+                                {% if footer_newsletter_field %}
+                                {{footer_newsletter_field}}
+                                {% elif lang == 'fr' %}
+                                    {{_('Ex : john.doe@gmail.com', lang)}}
+                                    {% set placeholder = 'Ex : john.doe@gmail.com' %}
+                                {% elif lang == 'nl' %}
+                                    {{_('Ex : john.doe@gmail.com', lang)}}
+                                    {% set placeholder = 'Ex : john.doe@gmail.com' %}
+                                {% elif lang == 'en' %}
+                                    {{_('Ex : john.doe@gmail.com', lang)}}
+                                    {% set placeholder = 'Ex : john.doe@gmail.com' %}
+
+                                {% endif %}
+                            </label>
+
+                            <input class="nlForm__input | fill" id="nlEmail" type="email" name="fields[email]"
+                                placeholder="{{placeholder}}" required />
+
+                            <button class="nlForm__submit | btn btn--s" onclick="newsl_reg();">
+                                <span class="btn__label">
+                                    {% if footer_newsletter_button %}
+                                        {{footer_newsletter_button}}
+                                    {% elif lang == 'fr' %}
+                                        {{_('Envoyer', lang)}}
+                                    {% elif lang == 'nl' %}
+                                        {{_('Verzenden', lang)}}
+                                    {% elif lang == 'en' %}
+                                        {{_('Send', lang)}}
+                                    {% endif %}
+                                </span>
+                                <span class="btn__bg | fill"></span>
+
+                                <svg class="m-only | nlForm__submitIcon | icon icon--arrow" viewBox="0 0 35 32"
+                                    aria-hidden="true" fill="none" stroke-width="4" stroke="currentColor">
+                                    <path d="M0 16h32" />
+                                    <path d="m18 2 14 14-14 14" />
+                                </svg>
+                            </button>
+                        </div>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </aside>
+
+        <section class="wrapper_columns">
+
+            <div class="footer__info">
+                <h3 class="fw-bold mb-5">{{_('Raccourcis', lang)}}</h3>
+
+                <ul class="footer__navList">
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}" aria-current="page">
+                            {% if footer_menu_home_text %}
+                                {{footer_menu_home_text}}
+                            {% elif lang == 'fr' %}
+                                {{_('Accueil', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Home', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Home', lang)}}
+                            {% endif %}
+                        </a>
+                    </li>
+
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}/pricing">
+                            {% if footer_menu_price_text %}
+                                {{footer_menu_price_text}}
+                            {% elif lang == 'fr' %}
+                                {{_('Pack et prix', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Verpakkingen en prijzen', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Packs and price', lang)}}
+                            {% endif %}
+                        </a>
+                    </li>
+
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}/silicon-ioi">
+                           {% if footer_menu_functionalities_text %}
+                                {{footer_menu_functionalities_text}}
+                            {% elif lang == 'fr' %}
+                                {{_('Fonctionnalités', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Kenmerken', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Functionalities', lang)}}
+                            {% endif %}
+                        </a>
+                    </li>
+
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}/about-us">
+                            {% if footer_menu_about_text %}
+                                {{footer_menu_about_text}}
+                            {% elif lang == 'fr' %}
+                                {{_('À propos', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Over ons', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('About', lang)}}
+                            {% endif %}
+                        </a>
+                    </li>
+                    
+                    <li class="footer__navEl">
+                        <a class="popup_demo_btn-js" href="/{{lang}}/experts">
+                            {% if footer_menu_about_text %}
+                                {{footer_menu_about_text}}
+                            {% elif lang == 'fr' %}
+                                {{_('Demandez votre démo', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Vraag uw demo aan', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Request your demo', lang)}}
+                            {% endif %}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__info">
+                <h3 class="fw-bold mb-5">{{_('Support', lang)}}</h3>
+
+                <ul class="footer__navList">
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}/experts">
+                            {% if lang == 'fr' %}
+                                {{_('Revendeurs', lang)}}
+                            {% elif lang == 'nl' %}
+                                {{_('Wederverkopers', lang)}}
+                            {% elif lang == 'en' %}
+                                {{_('Resellers', lang)}}
+                            {% endif %}
+                        </a>
+                    </li>
+                    
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}/contact">{{_('Contact', lang)}}</a>
+                    </li>
+                    
+                    <li class="footer__navEl">
+                        <a href="/{{lang}}/news">{{_('News', lang)}}</a>
+                    </li>
+
+                    <li class="footer__navEl">
+                        <a class="footer__navEl" href="/{{lang}}/ioi-universe" rel="nofollow"><span>{{_('Documentation', lang)}}</span></a>
+                    </li>
+                    
+                    <li class="footer__navEl">
+                        <a class="footer__navEl" href="/{{lang}}/appointments"><span>{{_('Appointments', lang)}}</span></a>
+                    </li>
+                    
+                    <li class="footer__navEl">
+                        <a class="footer__navEl" href="/{{lang}}/peppol"><span>{{_('Peppol', lang)}}</span></a>
+                    </li>
+                </ul>
+                <div class="footer__label">
+                    <img width="64" height="72"
+                        src="/files/temp/label_iso.svg" alt="{{_('Label ISO 9001', lang)}}" >
+                    <img width="72" height="72"
+                        src="/files/temp/label_luxembourg.svg"
+                        alt="{{_('Label Made in Luxembourg', lang)}}" >
+                    <img width="72" height="72"
+                        src="/files/web_template/2025/3/footer_adaptative/label_belgique.svg"
+                        alt="{{_('Label Made in Belgium', lang)}}" >
+                </div>
+            </div>
+
+            <div class="footer__info" itemscope itemtype="http://schema.org/Organization">
+                <p class="small mt-10">ERP Silicon ioi is developed by</p>
+                <h3 itemprop="name" class="fw-bold mb-5 mt-3">Silicon Brain NV/SA (Belgium) <br/>& Silicon Spirit SàRL (Luxemburg)</h3>
+
+                <a class="footer__navEl" href="mailto:info@ioi.online" itemprop="email">info@ioi.online</a>
+                
+                <div class="footer__bookend">
+                    <ul class="footer_social">
+                        <li><img src="/files/Fb.svg" class="footer_social_img mr-5" width="20" height="20" alt="Logo Facebook"><a class="footer_social_link" href="https://www.facebook.com/Siliconioi/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><img src="/files/Insta.svg" class="footer_social_img mr-5" width="20" height="20" alt="Logo Instagram"><a class="footer_social_link" href="https://www.instagram.com/silicon_ioi/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><img src="/files/Linkedin.svg" class="footer_social_img mr-5" width="20" height="20" alt="Logo Linkedin"><a class="footer_social_link" href="https://www.linkedin.com/company/siliconioi/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+                        <li><img src="/files/Youtube.svg" class="footer_social_img mr-5" width="20" height="20" alt="Logo YouTube"><a class="footer_social_link" href="https://www.youtube.com/channel/UC5c-wmRwE_qetwXpbvO0RUw" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    </ul>
+                
+                    <p class="footer__copyright">
+                        ©2025
+                        {% if footer_copyright_text %}
+                            {{footer_copyright_text}}
+                        {% elif lang == 'fr' %}
+                            {{_('Copyright & Design by Silicon Brain NV/SA. Website made with ERP Silicon ioi', lang)}}
+                        {% elif lang == 'nl' %}
+                            {{_('Copyright & Design by Silicon Brain NV/SA. Website made with ERP Silicon ioi', lang)}}
+                        {% elif lang == 'en' %}
+                            {{_('Copyright & Design by Silicon Brain NV/SA. Website made with ERP Silicon ioi', lang)}}
+                        {% endif %}
+                    </p>
+        
+                    <ul class="footer__legals">
+                        <li class="footer__legalsEl">
+                            {% if footer_term_text %}
+                            <a href="/files/web_template/2025/3/footer_adaptative/silicon_ioi_software_term_of_use_fr.pdf" target="_blank" rel="noopener noreferrer">
+                                {{footer_term_text}}
+                            </a>
+                            {% elif lang == 'fr' %}
+                            <a href="/fr/terms-of-use" target="_blank" rel="noopener noreferrer">
+                                {{_('Conditions d\'utilisation', lang)}}
+                            </a>
+                            {% elif lang == 'nl' %}
+                            <a href="/nl/terms-of-use" target="_blank" rel="noopener noreferrer">
+                                {{_('Gebruiksvoorwaarden', lang)}}
+                            </a>
+                            {% elif lang == 'en' %}
+                            <a href="/en/terms-of-use" target="_blank" rel="noopener noreferrer">
+                                {{_('Terms of use', lang)}}
+                            </a>
+                            {% endif %}
+                        </li>
+                        <li class="footer__legalsEl">
+                            <a href="/{{lang}}/privacy" target="_blank" rel="noopener noreferrer">
+                                {% if footer_policy_text %}
+                                    {{footer_policy_text}}
+                                {% elif lang == 'fr' %}
+                                    {{_('Politique de confidentialité', lang)}}
+                                {% elif lang == 'nl' %}
+                                    {{_('Privacybeleid', lang)}}
+                                {% elif lang == 'en' %}
+                                    {{_('Privacy policy', lang)}}
+                                {% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="wrapper_footer__silicon">
+        <p class="footer__silicon">silicon <span>ioi</span></p>
+    </div>
+    <svg class="bg_wave" fill="none" height="1151" preserveAspectRatio="xMidYMin slice" viewBox="0 0 1930 1151" width="1930" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ECECEC"></stop>
+          <stop offset="50%" stop-color="#ECECEC"></stop>
+          <stop offset="100%" stop-color="#ECECEC"></stop>
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad1)" d="
+        M0 158.535C215.527 501.272 344.963 554.725 424.339 535.807C522.74 512.332 559.413 374.021 680.689 369.981C782.849 366.557 804.349 463.117 887.277 460.924C1066.61 456.146 1128.22 0.39437 1288.01 0.000249789C1399.13 -0.270708 1456.32 219.993 1577.11 199.746C1646.47 188.119 1671.68 108.137 1726.63 123.04C1779.57 137.401 1784.02 218.491 1856.43 245.858C1885.65 256.893 1913.09 253.666 1929.68 250.168V1150.51H0V158.535Z">
+        <animate attributeName="d" dur="5s" repeatCount="indefinite" attributeType="XML" values="
+            M0 158.535C215.527 501.272 344.963 554.725 424.339 535.807C522.74 512.332 559.413 374.021 680.689 369.981C782.849 366.557 804.349 463.117 887.277 460.924C1066.61 456.146 1128.22 0.39437 1288.01 0.000249789C1399.13 -0.270708 1456.32 219.993 1577.11 199.746C1646.47 188.119 1671.68 108.137 1726.63 123.04C1779.57 137.401 1784.02 218.491 1856.43 245.858C1885.65 256.893 1913.09 253.666 1929.68 250.168V1150.51H0V158.535Z;
+    
+            M0 180C200 480 350 540 430 530C500 510 560 380 690 370C790 360 810 450 900 460C1100 470 1130 30 1290 0C1400 10 1460 210 1580 200C1650 190 1680 120 1730 130C1780 140 1790 220 1860 250C1890 260 1920 255 1930 250V1150.51H0V180Z;
+    
+            M0 140C180 490 340 560 410 540C520 510 580 370 700 360C800 350 820 470 880 460C1080 440 1120 10 1300 0C1380 0 1440 230 1570 210C1660 200 1690 90 1740 110C1790 130 1800 210 1850 240C1900 260 1920 250 1930 250V1150.51H0V140Z;
+    
+            M0 158.535C215.527 501.272 344.963 554.725 424.339 535.807C522.74 512.332 559.413 374.021 680.689 369.981C782.849 366.557 804.349 463.117 887.277 460.924C1066.61 456.146 1128.22 0.39437 1288.01 0.000249789C1399.13 -0.270708 1456.32 219.993 1577.11 199.746C1646.47 188.119 1671.68 108.137 1726.63 123.04C1779.57 137.401 1784.02 218.491 1856.43 245.858C1885.65 256.893 1913.09 253.666 1929.68 250.168V1150.51H0V158.535Z
+          ">
+        </animate>
+      </path>
+    </svg>
+</footer>
+
+{% set var = frappe.db.get_value("Web Template","Component - Form popup","template") %}
+{{frappe.render_template(var)}}
+{% endif %}

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/files/block_cards.css">
+
+{% if cards_actif %}
+<div class="block_cards">
+    <div class="cards_header">
+        {% if cards_title %}
+        <h2 class="cards_title w-100 text-{{cards_title_position}}">{{ cards_title }}</h2>
+        {% endif %}
+    
+        {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+        {% set args = {
+        "cta_title": cards_cta_title,
+        "cta_url": cards_cta_url,
+        "cta_color": cards_cta_color,
+        "cta_position": cards_cta_position,
+        "cta_target_blank" : cards_cta_target_blank,
+        } %}
+        {{frappe.render_template(var,args)}}
+    </div>
+
+    {% if cards_repeater %}
+    <div class="cards_wrapper_item">
+        {% for card in cards_repeater %}
+        <div class="cards_item cards_item_col{{ cards_columns }}">
+            {% if card.title %}
+            <h3 class="cards_item_title">{{ card.title }}</h3>
+            {% endif %}
+
+            {% if card.content %}
+            <p class="cards_item_text">{{ card.content }}</p>
+            {% endif %}
+
+            <button role="button" class="cards_item_button">{{ _('Lire plus')}}</button>
+
+            {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+            {% set args = {
+            "cta_title": card.cta_title,
+            "cta_url": card.cta_url,
+            "cta_color": card.cta_color,
+            "cta_target_blank" : card.cta_target_blank,
+            } %}
+            {{frappe.render_template(var,args)}}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endif %}

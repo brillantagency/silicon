@@ -1,0 +1,210 @@
+{% set lang = 'en' %}
+{% set hidden_footer_pages = ["/wishlist", "/cart", "/deliveries", "open-orders", "/invoices", "/item", "/login", "/open-orders", "/shop", "/closed-orders", "/detailed_ticket", "/me", "/tickets"] %}
+{% set path_parts = frappe.request.path.split('/') %}
+
+{% if path_parts | length > 1 and path_parts[1] in ['fr', 'nl', 'de'] %}
+    {% set lang = path_parts[1] %}
+{% endif %}
+
+{% set relativeLink = path_parts[2] if path_parts | length > 2 else '' %}
+
+{% if frappe.request.path not in hidden_footer_pages %}
+<header id="header" class="header | ctn ctn--bounds | no-select"
+  data-layout-component="Menu">
+  {#<a class="skipLink | sr-only no-outline | js-skipLink" href="/#content">{{_("Skip to content",lang)}}</a>#}
+
+  <div class="header__wrapper container">
+    <button class="menuBtn | js-Menu-menuBtn d-flex align-items-center justify-content-center" aria-haspopup="true" aria-expanded="false">
+      <span class="visually-hidden">Menu</span>
+      <span class="menuBtn__icon">
+        <span class="menuBtn__bar"></span>
+        <span class="menuBtn__bar"></span>
+        <span class="menuBtn__bar"></span>
+      </span>
+
+      <svg class="menuBtn__circle | fill" viewBox="0 0 100 100" fill="none" stroke="currentColor" aria-hidden="true">
+        <circle cx="50" cy="50" r="50" pathLength="100" />
+      </svg>
+    </button>
+    
+    <p class="header__title">
+      <img src="/files/website_settings/website_settings/logo%20positif%20RVB.svg" alt="Silicon ioi" width="176" height="69"
+        class="header__logo | logo logo--sb" aria-hidden="true">
+      <a href="/{{lang}}" class="fill" title="{{ _("Lien vers la homepage de Silicon ioi", lang) }}">
+        <span class="sr-only">Silicon Brain</span>
+      </a>
+    </p>
+
+    <div class="header__scrollAreaCtn">
+      <div class="header__scrollarea | js-Menu-scrollArea" tabindex="-1">
+        <nav class="header__nav | nav">
+          <h2 class="visually-hidden">Main Navbar</h2>
+
+          <ul class="nav__list" style="--totalItems: 5">
+            <li class="nav__item {% if current_page == 1 %} is-current{% endif %}" style="--i: 0">
+              <a href="/{{lang}}" aria-current="page">
+                <span>{{_("Home",lang)}}</span>
+              </a>
+            </li>
+
+            <li class="nav__item {% if current_page == 2 %} is-current{% endif %}" style="--i: 1">
+              <a href="/{{lang}}/new-generation">
+                <span>{{_("New generation",lang)}}</span>
+              </a>
+            </li>
+
+            <li class="nav__item {% if current_page == 3 %} is-current{% endif %}" style="--i: 2">
+              <a href="/{{lang}}/applications">
+                <span>{{_("Our apps",lang)}}</span>
+              </a>
+            </li>
+
+            <li class="nav__item {% if current_page == 4 %} is-current{% endif %}" style="--i: 3">
+              <a href="/{{lang}}/pricing">
+                <span>{{_("Pack & pricing",lang)}}</span>
+              </a>
+            </li>
+            
+            <li class="nav__item {% if current_page == 6 %} is-current{% endif %}" style="--i: 4">
+              <a href="/{{lang}}/silicon-ioi">
+                <span>Silicon ioi®</span>
+              </a>
+            </li>
+
+            <li class="nav__item {% if current_page == 10 %} is-current{% endif %}" style="--i: 5">
+              <a href="/{{lang}}/silicon-master">
+                <span>Silicon Master®</span>
+              </a>
+            </li>
+
+          {% if home == 1 %}
+            <li class="nav__item" style="--i: 6">
+              <a href="/login">
+                <span>{{_("Login")}}</span>
+              </a>
+            </li>
+            {%endif%}
+          </ul>
+
+          <ul class="nav__list nav__list_2" style="--totalItems: 4">
+          
+            {#<li class="nav__item {% if current_page == 5 %} is-current{% endif %}" style="--i: 6">
+              <a href="https://forum.ioi.online/latest/ioi-public-annoucement" target="_blank" rel="noopener noreferrer nofollow">
+                <span>{{_("News",lang)}}</span>
+              </a>
+            </li>#}
+            
+            <li class="nav__item {% if current_page == 5 %} is-current{% endif %}" style="--i: 7">
+              <a href="/{{lang}}/experts">
+                <span>{{_("Resellers",lang)}}</span>
+              </a>
+            </li>
+            
+            <li class="nav__item {% if current_page == 5 %} is-current{% endif %}" style="--i: 7">
+              <a href="/{{lang}}/about-us">
+                <span>{{_("About us",lang)}}</span>
+              </a>
+            </li>
+            
+            <li class="nav__item {% if current_page == 7 %} is-current{% endif %}" style="--i: 6">
+              <a href="/{{lang}}/news">
+                <span>{{_("News",lang)}}</span>
+              </a>
+            </li>
+
+            <li class="nav__item {% if current_page == 8 %} is-current{% endif %}" style="--i: 8">
+              <a href="/{{lang}}/ioi-universe" rel="nofollow">
+                <span>{{_("Our documentation",lang)}}</span>
+              </a>
+            </li>
+
+            <li class="nav__item {% if current_page == 9 %} is-current{% endif %}" style="--i: 9">
+              <a href="/{{lang}}/references">
+                <span>{{_("Our references",lang)}}</span>
+              </a>
+            </li>
+            
+            <li class="nav__item {% if current_page == 9 %} is-current{% endif %}" style="--i: 10">
+              <a href="/{{lang}}/appointments">
+                <span>{{_("Appointments",lang)}}</span>
+              </a>
+            </li>
+            
+            <li class="nav__item {% if current_page == 10 %} is-current{% endif %}" style="--i: 11">
+              <a href="/{{lang}}/peppol">
+                <span>{{_("Peppol",lang)}}</span>
+              </a>
+            </li>
+
+          {% if home == 1 %}
+            <li class="nav__item" style="--i: 6">
+              <a href="/login">
+                <span>{{_("Login")}}</span>
+              </a>
+            </li>
+            {%endif%}
+
+            <li class="nav__itemCta mt-20" style="--i: 9">
+              <a class="nav__itemCtaBtn | btnArrow" href="/{{lang}}/experts">
+                <span class="btnArrow__label"> {{_("Try for free / Order",lang)}} </span>
+
+                <span class="btnArrow__arrow | fill | up | actr | untouchable" aria-hidden="false">
+                  <span class="btnArrow__arrowLabel"> {{_("Try for free / Order",lang)}} </span>
+
+                  <svg class="btnArrow__arrowIcon | icon icon--arrow"
+                    fill="none" stroke-width="4" stroke="currentColor">
+                    <path d="M0 16h32" />
+                    <path d="m18 2 14 14-14 14" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="header__nav_button d-flex">
+      <a class="header__contactBtn | t-hidden | btn btn--s btn--bright position-relative" href="/{{lang}}/pricing">
+        <span class="btn__label">{{_("Pricing",lang)}}</span>
+        <span class="btn__bg | fill"></span>
+      </a>
+      
+      <a class="header__contactBtn | t-hidden | btn btn--s btn--bright position-relative popup_demo_btn-js" href="/{{lang}}/experts">
+        <span class="btn__label">{{_("Demo",lang)}}</span>
+        <span class="btn__bg | fill"></span>
+      </a>
+
+      <nav class="header__langNav | langSwitch position-relative mt-0">
+        <h3 class="sr-only">Language Switch</h3>
+
+        <div class="langSwitch__current | actr | js-Menu-stg">
+          <abbr lang="{{lang}}" title="{{lang}}">{{lang}}</abbr>
+
+          <svg class="icon icon--arrow | chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"
+            stroke="currentColor" aria-hidden="true">
+            <g transform="rotate(90 8 8)">
+              <path class="chevron__path" d="M6 11.9966L10 8" stroke-width="2" stroke-linecap="square" />
+              <path class="chevron__path" d="M10 7.99317L6 3.99658" stroke-width="2" stroke-linecap="square" />
+            </g>
+          </svg>
+        </div>
+
+        {% set first_langSwitch= "en" if lang!="en" else "nl" if lang!="nl" else "fr" %}
+        {% set sec_langSwitch= "fr" if lang!="fr" else "nl" if lang!="nl" else "en" %}
+        <ul class="langSwitch__list">
+          <li class="langSwitch__item | js-Menu-stg">
+            <a class="langSwitch__link | actr" href="/{{first_langSwitch}}{% if home == "0" or home == 0 %}/{{relativeLink or ''}}{% endif %}" hreflang="{{first_langSwitch}}">
+              <abbr class="up" lang="{{first_langSwitch}}" title="{{first_langSwitch}}">{{first_langSwitch}}</abbr>
+            </a>
+          </li>
+          <li class="langSwitch__item | js-Menu-stg">
+            <a class="langSwitch__link | actr" href="/{{sec_langSwitch}}{% if home == "0" or home == 0 %}/{{relativeLink or ''}}{% endif %}" hreflang="{{sec_langSwitch}}">
+              <abbr class="up" lang="{{sec_langSwitch}}" title="{{sec_langSwitch}}">{{sec_langSwitch}}</abbr>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+{% endif %}

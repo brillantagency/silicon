@@ -1,0 +1,44 @@
+{% set colors = {
+  "Grey": "bg_grey",
+  "Blue": "bg_blue",
+  "Dark blue": "bg_darkblue"
+} %}
+
+{% set text_position = {
+  "Right": "text-right",
+  "Center": "text-center",
+  "Left": "text-left"
+} %}
+
+{% if text_image_actif %}
+<div class="block_text_media {{ colors.get(text_image_bg, '') }} {% if text_image_bg != white %}py-44{% endif %}">
+    <div class="text_media_position text_media_position_{{ text_image_position_left }}  {% if text_image_position_left == 'Center' %}w-75{% endif%} container">
+        {% if text_image_image %}
+        <div class="text_media_wrapper text_media_media_wrapper">
+            <img class="text_media_img" src="{{text_image_image}}" alt="{{ text_image_image_alt if text_image_image_alt else '' }}">
+        </div>
+        {% endif %}
+        
+        <div class="text_media_wrapper text_media_text_wrapper {% if text_image_bg == 'Blue' or text_image_bg == 'Dark blue' %}text-white{% endif %} {% if not text_image_image %} text_media_wrapper_nomedia{% endif %}">
+            {% if text_image_title %}
+            <h2 class="text_media_title">{{text_image_title}}</h2>
+            {% endif %}
+            
+            {% if text_image_text %}
+                {{text_image_text}}
+            {% endif %}
+            
+            {% set var = frappe.db.get_value("Web Template","Component - Cta","template") %}
+            {% set args = {
+              "cta_title": cta_title,
+              "cta_url": cta_url,
+              "cta_color": cta_color,
+              "cta_position": text_image_text_align,
+              "cta_actif_popup_demo": cta_actif_popup_demo,
+              "cta_target_blank" : cta_target_blank,
+            } %}
+            {{frappe.render_template(var,args)}}
+        </div>
+   </div>
+</div>
+{% endif %}
