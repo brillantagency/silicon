@@ -1,0 +1,70 @@
+{% set lang = 'en' %}
+{% set hidden_footer_pages = ["/wishlist", "/cart", "/deliveries", "/item", "/login", "/open-orders", "/shop"] %}
+{% set path_parts = frappe.request.path.split('/') %}
+
+{% if path_parts | length > 1 and path_parts[1] in ['fr', 'nl', 'en'] %}
+    {% set lang = path_parts[1] %}
+{% endif %}
+
+<div id="popup_demo" class="popup_demo">
+    <div class="popup_demo_wrapper">
+    <svg class="bg_wave popup_demo_svg" fill="none" height="1151" preserveAspectRatio="xMidYMin slice" viewBox="0 0 1930 1151" width="1930" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" stop-color="#ECECEC"></stop>
+        <stop offset="50%" stop-color="#ECECEC"></stop>
+        <stop offset="100%" stop-color="#ECECEC"></stop>
+        </linearGradient>
+        </defs>
+        <path d="
+                M0 158.535C215.527 501.272 344.963 554.725 424.339 535.807C522.74 512.332 559.413 374.021 680.689 369.981C782.849 366.557 804.349 463.117 887.277 460.924C1066.61 456.146 1128.22 0.39437 1288.01 0.000249789C1399.13 -0.270708 1456.32 219.993 1577.11 199.746C1646.47 188.119 1671.68 108.137 1726.63 123.04C1779.57 137.401 1784.02 218.491 1856.43 245.858C1885.65 256.893 1913.09 253.666 1929.68 250.168V1150.51H0V158.535Z" fill="url(#grad1)">
+        <animate attributeName="d" attributeType="XML" dur="5s" repeatCount="indefinite" values="
+                    M0 158.535C215.527 501.272 344.963 554.725 424.339 535.807C522.74 512.332 559.413 374.021 680.689 369.981C782.849 366.557 804.349 463.117 887.277 460.924C1066.61 456.146 1128.22 0.39437 1288.01 0.000249789C1399.13 -0.270708 1456.32 219.993 1577.11 199.746C1646.47 188.119 1671.68 108.137 1726.63 123.04C1779.57 137.401 1784.02 218.491 1856.43 245.858C1885.65 256.893 1913.09 253.666 1929.68 250.168V1150.51H0V158.535Z;
+            
+                    M0 180C200 480 350 540 430 530C500 510 560 380 690 370C790 360 810 450 900 460C1100 470 1130 30 1290 0C1400 10 1460 210 1580 200C1650 190 1680 120 1730 130C1780 140 1790 220 1860 250C1890 260 1920 255 1930 250V1150.51H0V180Z;
+            
+                    M0 140C180 490 340 560 410 540C520 510 580 370 700 360C800 350 820 470 880 460C1080 440 1120 10 1300 0C1380 0 1440 230 1570 210C1660 200 1690 90 1740 110C1790 130 1800 210 1850 240C1900 260 1920 250 1930 250V1150.51H0V140Z;
+            
+                    M0 158.535C215.527 501.272 344.963 554.725 424.339 535.807C522.74 512.332 559.413 374.021 680.689 369.981C782.849 366.557 804.349 463.117 887.277 460.924C1066.61 456.146 1128.22 0.39437 1288.01 0.000249789C1399.13 -0.270708 1456.32 219.993 1577.11 199.746C1646.47 188.119 1671.68 108.137 1726.63 123.04C1779.57 137.401 1784.02 218.491 1856.43 245.858C1885.65 256.893 1913.09 253.666 1929.68 250.168V1150.51H0V158.535Z
+                  ">
+        </animate>
+        </path>
+        </svg>
+        <button role="button" id="popup_demo_close-js" class="popup_demo_btn">X</button>
+
+        <div class="popup_demo_content">
+            <p class="text-white mb-20 mt-0 h2">
+                {{_('Découvrez Silicon IOI lors d’une démonstration gratuite', lang)}}
+            </p>
+            
+            <ul class="pl-10">
+                <li>
+                    {{_('Explorez la solution en direct avec un expert', lang)}}
+                </li>
+                <li class="mt-5">
+                    {{_('Obtenez des réponses claires à toutes vos questions', lang)}}
+                </li>
+                <li class="mt-5">
+                    {{_('Profitez d’astuces et conseils pratiques directement applicables', lang)}}
+                </li>
+            </ul>
+            
+            <p class="popup_demo_cta">{{_('Planifiez votre session avec un expert', lang) }} →</p>
+        </div>
+        <div class="popup_demo_form">
+            <img width="300" class="popup_demo_img mx-auto" src="/files/Mockups_03-1024x683.webp" alt />
+            <h3 class="text-center mb-10 mt-0 text-uppercase">
+                {{_('Demandez votre démo gratuite', lang)}}
+            </h3>
+            <iframe class="popup_demo_form_iframe" src="{% if lang == 'fr' %}https://silicon-ioi.online/fr/demo{% elif lang == 'nl' %}https://silicon-ioi.online/nl/demo{% elif lang == 'en' %}https://silicon-ioi.online/en/demo{% endif %}"></iframe>
+       </div> 
+    </div>
+</div>
+
+<script>
+window.addEventListener("message", function(event) {
+    if (event.data && event.data.type === "frappe-webform-success") {
+        window.location.href = event.data.redirect_url;
+    }
+});
+</script>

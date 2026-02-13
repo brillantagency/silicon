@@ -1,0 +1,48 @@
+<section class="web-body web-body--applications">
+    <div class="container-head-b">
+        <div class="head-banner">
+            <h1>{{ doc.title }}</h1>
+        </div>
+    </div>
+</section>
+
+<section class="main-content">
+    <div class="ctn single_news">
+        <div>
+            <div class="single_news_head_wrapper_content">
+                <a class="single_news_link_blog" href="/{{doc.language}}/news">{{_('Voir tous les articles') }}</a>
+                <a class="single_news_button_readvoice" href="" title="{{ _('Votre lecture auditive link') }}">{{ _('Votre lecture auditive 🎧') }}</a>
+            </div>
+            <div class="single_news_head_wrapper_img">
+                <img alt="" width="820" height="550" src="{{ doc.image }}">
+            </div>
+            <div class="single_news_wrapper_content">
+                {{ doc.content | safe }}
+            </div>
+        </div>
+        <aside class="single_news_aside">
+            <div class="single_news_aside_lastnews">
+                <h2 class="single_news_aside_title_h2">{{_('Les 3 derniers articles')}}</h2>
+                {% set latest_news = frappe.get_all("ioi Site News", 
+                filters={"published": 1},
+                fields=["name", "title", "route", "date", "image"],
+                order_by="creation desc",
+                limit_page_length=3) %}
+                <ul class="single_news_aside_list list-unstyled">
+                    {% for news in latest_news %}
+                    <li class="single_news_aside_lastnews_item">
+                        <a class="single_news_aside_lastnews_item_link" href="{{ news.route }}">
+                            <p class="single_news_aside_lastnews_item_title">
+                                <img alt="" src="{{ news.image }}" width="150" height="100" class="single_news_aside_lastnews_item_title_img">
+                                <span class="single_news_aside_lastnews_item_title_span">{{ news.title }}
+                                    <span class="single_news_aside_lastnews_item_title_date">{{ news.date }}</span>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
